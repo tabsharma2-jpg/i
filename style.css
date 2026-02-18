@@ -1,0 +1,162 @@
+/* पूरे पेज का बेसिक सेटअप */
+body {
+    background-color: #000000; /* डार्क बैकग्राउंड */
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    gap: 30px; /* दोनों हिस्सों के बीच गैप */
+}
+
+/* --- बाईं ओर का हिस्सा (इमेज) --- */
+.left-column {
+    display: none; /* मोबाइल पर छुपाएं */
+    flex: 1;
+    text-align: right;
+}
+
+/* बड़ी स्क्रीन पर इमेज दिखाएं */
+@media (min-width: 800px) {
+    .left-column {
+        display: block;
+    }
+}
+
+.left-column img {
+    max-width: 400px; /* फोटो का साइज़ */
+    height: auto;
+    border-radius: 10px; /* कोने थोड़े गोल */
+}
+
+/* --- दाईं ओर का हिस्सा (फॉर्म) --- */
+.right-column {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-box {
+    background-color: #000000;
+    border: 1px solid #363636; /* ग्रे बॉर्डर */
+    padding: 30px 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* लोगो का स्टाइल */
+.logo-text {
+    font-family: 'Grand Hotel', cursive; /* कर्सिव फॉन्ट */
+    font-size: 38px;
+    margin: 10px 0 30px 0;
+    font-weight: normal;
+}
+
+/* इनपुट फील्ड */
+input {
+    width: 100%;
+    background-color: #121212; /* इनपुट का बैकग्राउंड */
+    border: 1px solid #363636;
+    padding: 10px;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 12px;
+    margin-bottom: 8px;
+    box-sizing: border-box; /* पैडिंग को साइज में ही रखें */
+}
+
+input:focus {
+    border: 1px solid #757575;
+    outline: none;
+}
+
+/* बटन */
+.login-btn {
+    width: 100%;
+    background-color: #0095f6; /* नीला बटन */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #1877f2;
+}
+
+/* डिवाइडर लाइन (OR) */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #8e8e8e;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #363636;
+}
+
+.or {
+    padding: 0 10px;
+}
+
+.fb-login {
+    color: #385185;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.forgot-pass {
+    color: #e0f1ff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* साइन अप बॉक्स */
+.signup-box {
+    background-color: #000000;
+    border: 1px solid #363636;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.signup-link {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ऐप डाउनलोड सेक्शन */
+.app-download {
+    text-align: center;
+    padding: 10px;
+}
+
+.store-imgs img {
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}

